@@ -6,33 +6,44 @@
     <data>
         <variable
             name="view"
-            type="ru.korobeynikov.astonintensiv4.MainActivity" />
+            type="ru.korobeynikov.astonintensiv4.first.FragmentB" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".first.FragmentB">
 
         <Button
-            android:id="@+id/btnFirst"
+            android:id="@+id/btnBack"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 задача"
-            android:onClick="@{()->view.goToFirstActivity()}"
+            android:text="Назад"
+            android:onClick="@{()->view.goToBack()}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnSecond"
+            app:layout_constraintEnd_toStartOf="@+id/btnGoToC"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/btnSecond"
+            android:id="@+id/btnGoToC"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 задача"
+            android:text="C"
+            android:onClick="@{()->view.goToFragmentC()}"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnFirst"
+            app:layout_constraintStart_toEndOf="@+id/btnBack"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Fragment B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

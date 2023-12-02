@@ -6,33 +6,33 @@
     <data>
         <variable
             name="view"
-            type="ru.korobeynikov.astonintensiv4.MainActivity" />
+            type="ru.korobeynikov.astonintensiv4.first.FragmentA" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".first.FragmentA">
 
         <Button
-            android:id="@+id/btnFirst"
+            android:id="@+id/btnGoToB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1 задача"
-            android:onClick="@{()->view.goToFirstActivity()}"
+            android:text="B"
+            android:onClick="@{()->view.goToFragmentB()}"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/btnSecond"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/btnSecond"
+        <TextView
+            android:id="@+id/textFragment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="2 задача"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="10dp"
+            android:text="Fragment A"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/btnFirst"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

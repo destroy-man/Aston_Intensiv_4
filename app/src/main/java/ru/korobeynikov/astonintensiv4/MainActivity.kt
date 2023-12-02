@@ -1,11 +1,21 @@
 package ru.korobeynikov.astonintensiv4
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.databinding.DataBindingUtil
+import ru.korobeynikov.astonintensiv4.databinding.ActivityMainBinding
+import ru.korobeynikov.astonintensiv4.first.FirstActivity
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        val binding=DataBindingUtil.setContentView<ActivityMainBinding>(this,R.layout.activity_main)
+        binding.view=this
+    }
+
+    fun goToFirstActivity(){
+        startActivity(Intent(this,FirstActivity::class.java))
     }
 }
