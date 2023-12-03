@@ -6,6 +6,7 @@ import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import ru.korobeynikov.astonintensiv4.databinding.ActivityMainBinding
 import ru.korobeynikov.astonintensiv4.first.FirstActivity
+import ru.korobeynikov.astonintensiv4.second.SecondActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -17,5 +18,9 @@ class MainActivity : AppCompatActivity() {
 
     fun goToFirstActivity(){
         startActivity(Intent(this,FirstActivity::class.java))
+    }
+
+    fun goToSecondActivity(){
+        startActivity(Intent(this,SecondActivity::class.java))
     }
 }
