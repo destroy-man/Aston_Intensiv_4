@@ -10,17 +10,16 @@ import ru.korobeynikov.astonintensiv4.R
 import ru.korobeynikov.astonintensiv4.databinding.FragmentABinding
 
 class FragmentA : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        val binding=DataBindingUtil.inflate<FragmentABinding>(inflater,R.layout.fragment_a,container,false)
-        binding.view=this
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?, ): View {
+        val binding =
+            DataBindingUtil.inflate<FragmentABinding>(inflater, R.layout.fragment_a, container, false)
+        binding.btnGoToB.setOnClickListener {
+            val fTrans = parentFragmentManager.beginTransaction()
+            fTrans.replace(R.id.fragContainer, FragmentB())
+            fTrans.addToBackStack("A")
+            fTrans.commit()
+        }
         return binding.root
-    }
-
-    fun goToFragmentB(){
-        val fTrans=parentFragmentManager.beginTransaction()
-        fTrans.replace(R.id.fragContainer,FragmentB())
-        fTrans.addToBackStack("A")
-        fTrans.commit()
     }
 }

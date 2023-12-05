@@ -1,4 +1,4 @@
-package ru.korobeynikov.astonintensiv4.second
+package ru.korobeynikov.astonintensiv4.second.user
 
 import android.view.LayoutInflater
 import android.view.View

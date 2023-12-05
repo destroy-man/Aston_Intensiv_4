@@ -11,14 +11,13 @@ import ru.korobeynikov.astonintensiv4.R
 import ru.korobeynikov.astonintensiv4.databinding.FragmentDBinding
 
 class FragmentD : Fragment() {
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View {
-        val binding=DataBindingUtil.inflate<FragmentDBinding>(inflater,R.layout.fragment_d,container,false)
-        binding.view=this
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?, ): View {
+        val binding =
+            DataBindingUtil.inflate<FragmentDBinding>(inflater, R.layout.fragment_d, container, false)
+        binding.btnGoToB.setOnClickListener {
+            parentFragmentManager.popBackStack("B", FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        }
         return binding.root
-    }
-
-    fun goToFragmentB(){
-        parentFragmentManager.popBackStack("B", FragmentManager.POP_BACK_STACK_INCLUSIVE)
     }
 }

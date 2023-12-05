@@ -9,6 +9,6 @@ import ru.korobeynikov.astonintensiv4.databinding.ActivitySecondBinding
 class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataBindingUtil.setContentView<ActivitySecondBinding>(this,R.layout.activity_second)
+        DataBindingUtil.setContentView<ActivitySecondBinding>(this, R.layout.activity_second)
     }
 }

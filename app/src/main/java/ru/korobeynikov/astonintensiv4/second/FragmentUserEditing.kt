@@ -12,34 +12,37 @@ import ru.korobeynikov.astonintensiv4.R
 import ru.korobeynikov.astonintensiv4.databinding.FragmentUserEditingBinding
 
 class FragmentUserEditing : Fragment() {
-
-    lateinit var binding: FragmentUserEditingBinding
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?, ): View {
-        binding=DataBindingUtil.inflate(inflater,R.layout.fragment_user_editing,container,false)
-        binding.view=this
-        return binding.root
-    }
-
-    fun save(){
-        arguments?.let {
-            val position=it.getInt("position")
-            val listUsers=(parentFragment as FragmentListUsers).adapter.dataSet
-            val user=listUsers[position]
-            if(binding.textNameUser.text.isNotEmpty())
-                user.name=binding.textNameUser.text.toString()
-            if(binding.textSurnameUser.text.isNotEmpty())
-                user.surname=binding.textSurnameUser.text.toString()
-            if(binding.textPhoneUser.text.isNotEmpty())
-                user.phoneNumber=binding.textPhoneUser.text.toString()
-            if(binding.textPhotoUser.text.isNotEmpty())
-                user.photo=binding.textPhotoUser.text.toString().toInt()
-            listUsers[position]=user
-            //setFragmentResult("users", bundleOf("listUsers" to newListUsers))
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
+                              savedInstanceState: Bundle?, ): View {
+        val binding = DataBindingUtil
+            .inflate<FragmentUserEditingBinding>(inflater, R.layout.fragment_user_editing, container, false)
+        binding.btnSave.setOnClickListener {
+            arguments?.let {
+                val position = it.getInt("position")
+                var name = ""
+                var surname = ""
+                var phoneNumber = ""
+                var photo = 0
+                if (binding.textNameUser.text.isNotEmpty())
+                    name = binding.textNameUser.text.toString()
+                if (binding.textSurnameUser.text.isNotEmpty())
+                    surname = binding.textSurnameUser.text.toString()
+                if (binding.textPhoneUser.text.isNotEmpty())
+                    phoneNumber = binding.textPhoneUser.text.toString()
+                if (binding.textPhotoUser.text.isNotEmpty())
+                    photo = binding.textPhotoUser.text.toString().toInt()
+                setFragmentResult(
+                    "user", bundleOf(
+                        "position" to position, "name" to name, "surname" to surname,
+                        "phoneNumber" to phoneNumber, "photo" to photo
+                    )
+                )
+                parentFragmentManager.popBackStack()
+            }
         }
-    }
-
-    fun cancel(){
-        parentFragmentManager.popBackStack()
+        binding.btnCancel.setOnClickListener {
+            parentFragmentManager.popBackStack()
+        }
+        return binding.root
     }
 }

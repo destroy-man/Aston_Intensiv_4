@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <data>
-        <variable
-            name="view"
-            type="ru.korobeynikov.astonintensiv4.second.FragmentUserEditing" />
-    </data>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -18,7 +12,7 @@
             android:id="@+id/labelNameUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Имя: "
+            android:text="@string/text_name"
             app:layout_constraintBottom_toBottomOf="@+id/textNameUser"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textNameUser" />
@@ -38,7 +32,7 @@
             android:id="@+id/labelSurnameUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Фамилия: "
+            android:text="@string/text_surname"
             app:layout_constraintBottom_toBottomOf="@+id/textSurnameUser"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textSurnameUser" />
@@ -58,7 +52,7 @@
             android:id="@+id/labelPhoneUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Номер телефона: "
+            android:text="@string/text_phone"
             app:layout_constraintBottom_toBottomOf="@+id/textPhoneUser"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textPhoneUser" />
@@ -78,7 +72,7 @@
             android:id="@+id/labelPhotoUser"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Номер картинки: "
+            android:text="@string/text_photo"
             app:layout_constraintBottom_toBottomOf="@+id/textPhotoUser"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textPhotoUser" />
@@ -98,7 +92,7 @@
             android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сохранить"
+            android:text="@string/button_save"
             app:layout_constraintEnd_toStartOf="@+id/btnCancel"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textPhotoUser" />
@@ -107,8 +101,7 @@
             android:id="@+id/btnCancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Отмена"
-            android:onClick="@{()->view.cancel()}"
+            android:text="@string/button_cancel"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/btnSave"
             app:layout_constraintTop_toBottomOf="@+id/textPhotoUser" />

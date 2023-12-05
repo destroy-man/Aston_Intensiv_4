@@ -9,6 +9,6 @@ import ru.korobeynikov.astonintensiv4.databinding.ActivityFirstBinding
 class FirstActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        DataBindingUtil.setContentView<ActivityFirstBinding>(this,R.layout.activity_first)
+        DataBindingUtil.setContentView<ActivityFirstBinding>(this, R.layout.activity_first)
     }
 }
