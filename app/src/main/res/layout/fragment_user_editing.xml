@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".second.FragmentUserEditing">
+
+        <TextView
+            android:id="@+id/labelNameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_name"
+            app:layout_constraintBottom_toBottomOf="@+id/textNameUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textNameUser" />
+
+        <EditText
+            android:id="@+id/textNameUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelNameUser"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/labelSurnameUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_surname"
+            app:layout_constraintBottom_toBottomOf="@+id/textSurnameUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textSurnameUser" />
+
+        <EditText
+            android:id="@+id/textSurnameUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelSurnameUser"
+            app:layout_constraintTop_toBottomOf="@+id/textNameUser"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/labelPhoneUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_phone"
+            app:layout_constraintBottom_toBottomOf="@+id/textPhoneUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPhoneUser" />
+
+        <EditText
+            android:id="@+id/textPhoneUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelPhoneUser"
+            app:layout_constraintTop_toBottomOf="@+id/textSurnameUser"
+            tools:ignore="Autofill,LabelFor" />
+
+        <TextView
+            android:id="@+id/labelPhotoUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/text_photo"
+            app:layout_constraintBottom_toBottomOf="@+id/textPhotoUser"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPhotoUser" />
+
+        <EditText
+            android:id="@+id/textPhotoUser"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/labelPhotoUser"
+            app:layout_constraintTop_toBottomOf="@+id/textPhoneUser"
+            tools:ignore="Autofill,LabelFor" />
+
+        <Button
+            android:id="@+id/btnSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_save"
+            app:layout_constraintEnd_toStartOf="@+id/btnCancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textPhotoUser" />
+
+        <Button
+            android:id="@+id/btnCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_cancel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnSave"
+            app:layout_constraintTop_toBottomOf="@+id/textPhotoUser" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

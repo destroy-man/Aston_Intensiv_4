@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">AstonIntensiv4</string>
+    <string name="button_b">B</string>
+    <string name="text_fragment_a">Fragment A</string>
+    <string name="button_back">Назад</string>
+    <string name="button_c">C</string>
+    <string name="text_fragment_b">Fragment B</string>
+    <string name="button_a">A</string>
+    <string name="button_d">D</string>
+    <string name="text_fragment_c">Fragment C</string>
+    <string name="text_fragment_d">Fragment D</string>
+    <string name="text_name">Имя:</string>
+    <string name="text_surname">Фамилия:</string>
+    <string name="text_phone">Номер телефона:</string>
+    <string name="text_photo">Номер картинки:</string>
+    <string name="button_save">Сохранить</string>
+    <string name="button_cancel">Отмена</string>
+    <string name="first_task">1 задача</string>
+    <string name="second_task">2 задача</string>
 </resources>
